@@ -3,6 +3,7 @@ import path from 'path'
 import fs from 'fs'
 
 const app = express()
+const PORT = process.env.PORT || 8000
 
 app.get('/',(req,res)=>{
 
@@ -38,4 +39,4 @@ app.get('/',(req,res)=>{
     })
 })
 
-app.listen(8000, ()=>console.log("app is listening"))
+app.listen(PORT, ()=>console.log(`app is listening to port ${PORT}`))
